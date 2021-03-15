@@ -3,10 +3,65 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PresentationLayer"
+        xmlns:nav="clr-namespace:PresentationLayer.Navigators"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Main" Height="450" Width="800">
     <Grid>
-        
+        <Grid Background="White">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock 
+            Text="Menu"
+            FontSize="50"
+            Grid.Column="1"
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontFamily="Segoe UI Light"/>
+
+            <Image
+            Source="/Images/Skärmavbild 2021-03-14 kl. 14.26.49.png"/>
+
+            <StackPanel 
+            Grid.Row="1" 
+            Grid.Column="1">
+
+                <Button
+                Content="Owners"
+                Height="40" 
+                FontSize="24"
+                VerticalAlignment="Bottom"
+                Command="{Binding updateCurrentViewModelCommand}"  
+                CommandParameter="{x:Static nav:ViewType.Person}"/>
+
+            </StackPanel>
+
+            <StackPanel 
+            Grid.Row="2" 
+            Grid.Column="1">
+
+                <Button
+                Content="Dogs"
+                Height="40"
+                FontSize="24"
+                VerticalAlignment="Bottom"
+                />
+            </StackPanel>
+
+        </Grid>
+
+
     </Grid>
 </Window>

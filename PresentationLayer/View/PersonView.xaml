@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="PresentationLayer.View.PersonView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PresentationLayer.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid
+        Background="White">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Text="Register a new owner"
+            FontSize="20" 
+            FontFamily="Segoe UI Light"
+            VerticalAlignment="Center" />
+
+        <TextBlock
+            Text="SSN"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            FontSize="15" 
+            FontFamily="Segoe UI Light"/>
+
+        <TextBlock
+            Text="First name"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="15" 
+            FontFamily="Segoe UI Light"/>
+        
+        <TextBlock
+            Text="Last name"
+            Grid.Row="2"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            FontSize="15" 
+            FontFamily="Segoe UI Light"/>
+
+        <TextBlock
+            Text="Gender"
+            Grid.Row="2"
+           VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="15" 
+            FontFamily="Segoe UI Light"/>
+
+        <TextBlock
+            Text="Dog"
+            Grid.Row="3"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            FontSize="15" 
+            FontFamily="Segoe UI Light"/>
+
+        <TextBox
+            FontSize="15"
+            Height="25"
+            Width="200"
+            Grid.Column="1"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            Background="LightGray"/>
+
+        <TextBox
+            FontSize="15"
+            Height="25"
+            Width="200"
+            Grid.Column="1"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Background="LightGray"/>
+
+        <TextBox
+            FontSize="15"
+            Height="25"
+            Width="200"
+            Grid.Column="1"
+            Grid.Row="2"
+            VerticalAlignment="Top"
+            Background="LightGray"/>
+        
+        <TextBox
+            FontSize="15"
+            Height="25"
+            Width="200"
+            Grid.Column="1"
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            Background="LightGray"/>
+
+        <TextBox 
+            FontSize="15"
+            Height="25"
+            Width="200"
+            Grid.Column="1"
+            Grid.Row="3"
+            VerticalAlignment="Top"
+            Background="LightGray"/>
+    </Grid>
+</UserControl>
