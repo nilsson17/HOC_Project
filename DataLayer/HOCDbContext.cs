@@ -19,5 +19,17 @@ namespace DataLayer
 
         public DbSet<Person> Person { get; set; }
         public DbSet<Dog> Dog { get; set; }
+
+        public void Seed()
+        {
+            Person person = new Person();
+
+            person.SSN = "1999015";
+            person.FirstName = "Emma";
+            person.LastName = "Karlsson";
+            person.Gender = "Female";
+
+            Person.Add(person); 
+        }
     }
 }

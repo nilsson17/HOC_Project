@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:nav="clr-namespace:PresentationLayer.Navigators"
         mc:Ignorable="d"
-        Title="Main" Height="450" Width="800">
+        Title="Main" Height="600" Width="1090">
     <Grid>
         <Grid Background="White">
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.5*"/>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
@@ -23,41 +22,61 @@
             </Grid.RowDefinitions>
 
             <TextBlock 
-            Text="Menu"
+            Text="Dogs"
             FontSize="50"
-            Grid.Column="1"
+            Grid.Column="0"
             Grid.Row="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            FontFamily="Segoe UI Light"/>
+
+            <TextBlock
+             Text="Owners"
+             FontSize="50"
+             Grid.Column="2"
+             Grid.Row="0"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             FontFamily="Segoe UI Light"/>
 
-            <Image
-            Source="/Images/Skärmavbild 2021-03-14 kl. 14.26.49.png"/>
+            <Image Source="/Images\Skärmavbild 2021-03-14 kl. 14.26.49.png"
+                   Width="200"/>
+
+            <StackPanel 
+            Grid.Row="1" 
+            Grid.Column="0">
+                <ListView x:Name="LVDog"
+                          Width="400"
+                          HorizontalAlignment="Left">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="DogID" Width="100"/>
+                            <GridViewColumn Header="Name" Width="100"/>
+                            <GridViewColumn Header="Breed" Width="100"/>
+                            <GridViewColumn Header="Owner" Width="100"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
 
             <StackPanel 
             Grid.Row="1" 
             Grid.Column="1">
+                <ListView x:Name="LVOwners"
+                          Width="400"
+                          ItemsSource="{Binding People}"
+                          HorizontalAlignment="Center">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="SSN" Width="100" DisplayMemberBinding="{Binding SSN}"/>
+                            <GridViewColumn Header="First name" Width="100" DisplayMemberBinding="{Binding FirstName}"/>
+                            <GridViewColumn Header="Last name" Width="100" DisplayMemberBinding="{Binding LastName}"/>
+                            <GridViewColumn Header="Dog" Width="100" DisplayMemberBinding="{Binding Dog}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
 
-                <Button
-                Content="Owners"
-                Height="40" 
-                FontSize="24"
-                VerticalAlignment="Bottom"
-                Command="{Binding updateCurrentViewModelCommand}"  
-                CommandParameter="{x:Static nav:ViewType.Person}"/>
 
-            </StackPanel>
-
-            <StackPanel 
-            Grid.Row="2" 
-            Grid.Column="1">
-
-                <Button
-                Content="Dogs"
-                Height="40"
-                FontSize="24"
-                VerticalAlignment="Bottom"
-                />
             </StackPanel>
 
         </Grid>

@@ -14,7 +14,7 @@ namespace DataLayer.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Gender { get; set; }
-        public ICollection<Dog> Dog { get; set; }
+        public List<Dog> Dog { get; set; }
 
 
     }

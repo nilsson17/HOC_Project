@@ -18,5 +18,11 @@ namespace DataLayer.Repositories
         {
             get { return Context as HOCDbContext; }
         }
+
+        public List<Person> GetPeople()
+        {
+            var allPosts = HOC_DbContext.Person.OrderByDescending(a => a.FirstName).ToList(); 
+            return allPosts.ToList();
+        }
     }
 }

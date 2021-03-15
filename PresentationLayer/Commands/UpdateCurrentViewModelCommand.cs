@@ -42,7 +42,7 @@ namespace PresentationLayer.Commands
                 {
                     case ViewType.Person:
                         _navigator.CurrentViewModel = new PersonViewModel();
-                        MessageBox.Show(_navigator.CurrentViewModel.ToString());
+                        //MessageBox.Show(_navigator.CurrentViewModel.ToString());
                         break;
                     case ViewType.Dog:
                         _navigator.CurrentViewModel = new DogViewModel();

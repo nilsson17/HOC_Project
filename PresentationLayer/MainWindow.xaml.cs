@@ -1,4 +1,5 @@
 ﻿using DataLayer;
+using DataLayer.Models;
 using DataLayer.Repositories;
 using System;
 using System.Collections.Generic;
@@ -24,21 +25,33 @@ namespace PresentationLayer
     {
         static public UnitOfWork unitOfWork;
 
+        public void ListViewExample()
+        {
+            //InitializeComponent();
+            //List<Person> items = new List<Person>();
+            //items.Add(new Person() { SSN = "19990203", FirstName = "Emma", LastName = "Karlsson", Gender = "Female" });
+            //items.Add(new Person() { SSN = "1990405", FirstName = "Lisa", LastName = "Nilsson", Gender = "Female" });
+            //items.Add(new Person() { SSN = "19990203", FirstName = "Nils", LastName = "Nilsson", Gender = "Male" });
+            //LVOwners.ItemsSource = items;
+            
+           
+        }
         public MainWindow()
         {
+
+
             InitializeComponent();
 
             unitOfWork = new UnitOfWork(new HOCDbContext());
-            
-            unitOfWork.Complete();
-
+            //unitOfWork.Complete();
+        }
+    }
+}
 
             //using (var db = new HOCDbContext())
             //{
             //    MessageBox.Show(db.Database.Connection.ConnectionString);
             //    db.Database.Delete();
             //    db.Database.Create();
-            //}
-        }
-    }
-}
+ 
+

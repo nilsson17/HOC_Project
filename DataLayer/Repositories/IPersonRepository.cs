@@ -9,6 +9,6 @@ namespace DataLayer.Repositories
 {
     public interface IPersonRepository : IRepository<Person>
     {
-
+        List<Person> GetPeople();
     }
 }
